@@ -16,14 +16,14 @@ The project aims to design a monitoring system for an IoT-based production simul
 - Implement alerting to detect and notify of system issues
 
 
-#### High Level Goal
+### High Level Goal
 
 - Build a cloud-based monitoring system for IoT-enabled production simulation
 - Use Prometheus to collect metric and trigger alerts for defined thresholds
 - Employ Grafana to visualize collected metrics and logs in a user-friendly dashboard
 - Integrate these monitoring tools into a Kubernetes-based infrastructure deployed on Azure
 
-## Development and Existing Components
+### Development and Existing Components
 
 #### Components to build
 
@@ -38,5 +38,26 @@ The project aims to design a monitoring system for an IoT-based production simul
 - Prometheus and Grafana as open-source tools
 - Azure IoT Hub
 - Azure Kubernetes Service (AKS)
+
+### High-Level Cloud Architecture
+
+#### IoT Layer
+- Rasperry Pi devices simulate production by sending data to Azure IoT Hub
+
+#### Cloud Integration
+- Azure IoT Hub serves as the bridge between IoT devices and cloud infrastructure
+- Azure Kubernetes Service (AKS) hosts Prometheus and Grafana for metrics collection and visualization
+
+#### Monitoring and Alerting
+- Prometheus collects application and system metrics from the Kubernetes Cluster
+- Alert Manager (part of Prometheus) sends notifications based on thresholds
+
+#### Visualization
+- Grafana connects to Prometheus to visualize metrics/logs on dashboards
+
+
+### Architecture Diagram
+
+
 
 

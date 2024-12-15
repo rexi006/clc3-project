@@ -96,15 +96,15 @@ The project is related to cloud computing because it utilizes cloud-based techno
 
 ## Distribution of work and responsibilities
 
-| Responsibility               | Team Member                                      | |
-|-------------------------|--------------------------------------------------|----------|
-| Set up Rasperry Pi and production simulation   | Fabian Altendorfer              |
-| Configure Azure IoT Hub and ensure communication with IoT devices    | Fabian Altendorfer           |
-| Deploy and manage Kubernetes Cluster (AKS)    | Bernadette Ackerl |
-| Configure Prometheus for metrics collection and alerting        | Bernadette Ackerl     |
-| Set up Grafana dashboards for visualization       | Regina Gugg                |
-| Run simulations and test alerts       | Regina Gugg                |
-| Document Results       | All Members                |
+| Responsibility                                                     | Team Member                                      |
+|-------------------------------------------------------------------|--------------------------------------------------|
+| Set up Raspberry Pi and production simulation                     | Fabian Altendorfer                                |
+| Configure Azure IoT Hub and ensure communication with IoT devices | Fabian Altendorfer                                |
+| Deploy and manage Kubernetes Cluster (AKS)                         | Bernadette Ackerl                                 |
+| Configure Prometheus for metrics collection and alerting           | Bernadette Ackerl                                 |
+| Set up Grafana dashboards for visualization                        | Regina Gugg                                      |
+| Run simulations and test alerts                                   | Regina Gugg                                      |
+| Document Results                                                  | All Members                                      |
 
 
 

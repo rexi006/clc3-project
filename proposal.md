@@ -35,7 +35,6 @@ The project aims to design a monitoring system for an IoT-based production simul
 #### Architecture Diagram
 ![flowchart](./Flowchart.jpg)
 
-
 ## Setup
 ### Prerequisites
 - Azure account with permissions to create and manage resources.
@@ -71,6 +70,16 @@ The project aims to design a monitoring system for an IoT-based production simul
    - define Prometheus alert rules and configure notifications
 
 
+## Alerting + Notification
+To enhance monitoring and simulation for the manufacturing process, two alerting and notification scenarios will be implemented:
+1) **New IoT Device Notification:** When a new machine (IoT device) is integrated into the system, a notification will be triggered to inform relevant stakeholders.
+2) **Event Volume Alert:** If the system processes for example a threshold of 100 events within a defined period, an alert will be triggered, followed by a corresponding notification.
+   
+Prometheus will be utilized to monitor these scenarios and trigger alerts. For notification simulation, a webhook will be implemented, sending relevant information as a payload to a predefined URL. This webhook will likely be another endpoint within the microservice.
+
+This approach is chosen to simplify the implementation while providing flexibility for future enhancements. In a production environment, the webhook mechanism could easily be replaced or extended to integrate with an email-sending service or other notification platforms. However, due to the absence of an email server in this context (we don't own such server), a webhook serves as an effective and demonstrative alternative.
+
+
 ## Relation to Cloud Computing
 The project is related to cloud computing because it utilizes cloud-based technologies to manage and scale monitoring solutions. By utilizing Azure IoT Hub, the project collects and processes data from IoT devices in the cloud. Azure Kubernetes Service is used for deploying the mircoservice. Additionally, tools like Prometheus and Grafana are hosted in the cloud, providing real-time monitoring and visualization.
 
@@ -80,7 +89,7 @@ The project is related to cloud computing because it utilizes cloud-based techno
 |-------------------------|--------------------------------------------------|----------|--------------------------------------------------|
 | Setup IoT Simulation    | Configure Raspberry Pi and IoT Hub              | 28.12.2024   | Fabian Altendorfer |
 | Azure IoT Hub + Event Hub Configuration    | Configure IoT Hub              | 28.12.2024   | Fabian Altendorfer |
-| Setup microservice    | Implement a python microservice              | 05.01.2025   |Bernadette Ackerl|
+| Setup microservice    | Implement a python microservice with all needed endpoints              | 05.01.2025   |Bernadette Ackerl|
 | Setup kubernetes cluster    | Configure cluster              | 05.01.2025   |Bernadette Ackerl |
 | Deploy microservice    | Move mircoservice into cluster           | 05.01.2025   |Bernadette Ackerl|
 | Integrate Prometheus    | Configure Prometheus, implement alerts | 15.01.2025   |Regina Gugg |

@@ -1,4 +1,4 @@
-# CLC3 Project Proposal
+# CLC3 Project Proposal - Group Ackerl, Altendorfer, Gugg
 ## Project: Explore Prometheus & Grafana to observe an application
 ## Goal of the Project
 The project aims to design a monitoring system for an IoT-based production simulation using cloud technologies. Therefore, we will use Raspberry Pi devices to simulate a manufacturing process. The generated data will be transmitted to Azure IoT Hub, where it will serve as a centralized communication point between the IoT devices and the cloud infrastructure. To host both Prometheus and Grafana, we will use Azure Kubernetes Service (AKS). Prometheus will be configured to collect metrics like device health from the IoT devices and the cloud infrastructure. We will set up alerting rules in Prometheus to notify us of potential issues. Grafana will be used to visualize the logs.

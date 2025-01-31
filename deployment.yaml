@@ -1,0 +1,58 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: event-processor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: event-processor
+  template:
+    metadata:
+      labels:
+        app: event-processor
+      annotations:
+        prometheus.io/scrape: "true"   
+        prometheus.io/path: "/metrics" 
+        prometheus.io/port: "8000"     
+    spec:
+      containers:
+      - name: event-processor
+        image: bernadetteackerl/event-processor:latest
+        ports:
+        - containerPort: 8000
+        env:
+        - name: EVENT_HUB_CONNECTION_STRING
+          valueFrom:
+            secretKeyRef:
+              name: event-hub-secret
+              key: EVENT_HUB_CONNECTION_STRING
+        - name: WEBHOOK_URL  
+          value: "http://event-processor-service.default.svc.cluster.local:8000/alert"  
+        livenessProbe:
+          httpGet:
+            path: /healthz  
+            port: 8000
+          initialDelaySeconds: 10
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /ready  
+            port: 8000
+          initialDelaySeconds: 10
+          periodSeconds: 10
+      restartPolicy: Always
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: event-processor-service
+spec:
+  selector:
+    app: event-processor
+  ports:
+    - protocol: TCP
+      port: 8000   
+      targetPort: 8000
+  type: ClusterIP

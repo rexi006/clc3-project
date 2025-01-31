@@ -23,7 +23,6 @@ Next a list of dictionaries with lambda functions inside was created for the ind
 ![alt text](image-3.png)
 ![alt text](image-4.png)
 
-
 #### Async Connection Function
 The function connect_device is an asynchronous function responsible for establishing a connection to an IoT Hub device using its connection string. It creates an IoT Hub device client and connects it, returning the client for further usage. This setup is crucial for enabling communication between the simulation and the cloud services.
 
@@ -43,7 +42,9 @@ This Python script, when run on the Raspberry Pi, provides a detailed simulation
 
 ### Example
 When started, the following output can be observed in the console:
-![alt text](image.png)
+![alt text](image-8.png)
+
+The async function makes it possible that the parts going through the production process can be processed individually per station and that every station can start individually with a new item once the process on the previous item was finished.
 
 ## Setup in MS Azure
 In order to be able to create the connection strings for the connection to the cloud, an IoT-Hub and devices must be created inside the Microsoft Azure Portal.

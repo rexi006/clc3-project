@@ -1,4 +1,4 @@
-### Grafana Configuration and First Dashboard  
+# Grafana Configuration and First Dashboard  
 
 ### Deploy Grafana  
 In case you haven't already done it as mentioned in the documentation.md :)

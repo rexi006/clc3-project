@@ -50,8 +50,8 @@ Now open Grafana in your browser:
 
 ### Create Your First Dashboard  
 
-1️. Navigate to **📊 Dashboards → Create Dashboard**  
-2️. Click **"Add visualization"**  and add **Prometheus**
+1️. Navigate to **Dashboards → Create Dashboard**  
+2️. Click **"Add visualization"**  and add **Prometheus**  
 3️. In the **Query section**, select your Prometheus data source  
 4️. Enter a query, e.g.:  
 

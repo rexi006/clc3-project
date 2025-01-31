@@ -17,6 +17,49 @@ In the first part of the script,Imports and Connection Strings are placed for th
 
 ### Production Steps
 ![alt text](image-2.png)
-Next the 
+Next a list of dictionaries with lambda functions inside was created for the individual production steps to simulate a small production line. In total, eight production steps were created, including two transport-steps, each with their unique process-behaviour. Each production step can be seen as "workstation" or element of the production process. In modern real-life production systems, the data would come in similar granularity (but of course in much more volume) from the already mentioned OPC-UA Servers. 
 
+### The Simulation
+![alt text](image-3.png)
+![alt text](image-4.png)
+
+
+#### Async Connection Function
+The function connect_device is an asynchronous function responsible for establishing a connection to an IoT Hub device using its connection string. It creates an IoT Hub device client and connects it, returning the client for further usage. This setup is crucial for enabling communication between the simulation and the cloud services.
+
+#### Async Simulate Step Function
+The simulate_step function simulates one step of the production process asynchronously. It takes an item from an input queue, simulates the step's action using the lambda function defined in the PRODUCTION_STEPS list, sends the resulting data as a message to the IoT Hub, prints the action taken, waits for the duration specified for the step, and then places the item into the next step's queue if applicable. This function loops indefinitely, allowing for continuous simulation until terminated.
+
+#### Main Simulation Function
+The main function orchestrates the entire simulation:
+
+* Device Connections: It starts by connecting to multiple IoT devices using the connection strings provided earlier. These connections are managed asynchronously to handle multiple devices concurrently.
+* Queue Setup: Queues are created for each production step to simulate the flow of items through the production process. Each step has an input queue and optionally an output queue.
+* Task Creation: For each production step, a task is created using simulate_step. These tasks run concurrently, simulating the parallel nature of production lines.
+* Item Initiation: 1000 items are added to the first queue to start the simulation, with a delay between each item to mimic staggered production starts.
+* Completion and Cleanup: The simulation waits for all queues to be empty before proceeding to cancel all tasks, ensuring all items have completed their journey through the production steps. Finally, it disconnects from all IoT devices.
+
+This Python script, when run on the Raspberry Pi, provides a detailed simulation of a manufacturing line, where each step's data is sent to Microsoft Azure IoT Hub for further processing or analysis. The asynchronous nature of the code ensures efficient handling of multiple steps and devices, mirroring the complexities of an actual production environment.
+
+### Example
+When started, the following output can be observed in the console:
 ![alt text](image.png)
+
+## Setup in MS Azure
+In order to be able to create the connection strings for the connection to the cloud, an IoT-Hub and devices must be created inside the Microsoft Azure Portal.
+
+### IoT-Hub
+![alt text](image-5.png)
+The IoT-Hub "clcprojectbfr-iothub" was created in Location Germany West Central. Fortunately, Azure offers extensive free quotas for this service with 8000 daily free messages.
+
+### Devices
+![alt text](image-6.png)
+Inside IoT-Hub, 6 devices have been created (please note that for the transport-steps in the production systems, no devices are needed because no relevant data is created in these steps).
+
+Each device comes with two unique keys and their individual connection strings:
+![alt text](image-7.png)
+
+With the Devices inside the IoT-Hub in place, it is very easy to send data to the cloud. The data from the IoT-Hub is processed in subsequent steps, which are described in detail in the main documentation.
+
+## Main Advantage of this Setup
+From an IoT-centered viewpoint, the main advantage of this setup is the flexibility of the proposed solution. In complex modern manufacturing systems, data requirements can change rapidly, driven by issues during the manufacturing process or by quality issues and subsequent customer complaints (and, in the worst case, recalls). With this in mind, management typically demands that data be available in the cloud, ready for analysis if needed, for all devices involved in the manufacturing process, which can amount to several thousand per production line. If connections have to be manually established in the manufacturing plant's connection system for each device individually, it is unrealistic for IoT- and Data engineers to keep pace with business demands, as the manufacturing process is also subject to changes. The proposed solution provides the flexibility needed to achieve business value from day one.

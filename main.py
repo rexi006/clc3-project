@@ -7,7 +7,7 @@ from collections import deque
 import logging
 import requests
 
-# Prometheus-Metriken
+# Prometheus-Metriken für die zwei Alerts (siehe proposal.md)
 EVENTS_PROCESSED = Counter('events_processed_total', 'Total number of processed events')
 UNIQUE_DEVICES = Counter('unique_devices_total', 'Total number of unique IoT devices')
 
@@ -118,6 +118,7 @@ def process_events(partition_context, event):
     event_store.append(event_data)
     EVENTS_PROCESSED.inc()
     # updaten um dann stateful zu sein beim events lesen, weil sonst liest man immer alle aus und somit events auch doppelt
+    # in real-life applikation die folgende Zeile wieder als Code einblenden:
     # partition_context.update_checkpoint(event)
 
 
@@ -146,7 +147,6 @@ def azure_eventhub_listener():
     finally:
         client.close()
 
-# Thread starten
 threading.Thread(target=azure_eventhub_listener, daemon=True).start()
 
 if __name__ == "__main__":

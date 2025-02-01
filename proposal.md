@@ -33,7 +33,7 @@ The project aims to design a monitoring system for an IoT-based production simul
 
 ### High-Level Cloud Architecture
 #### Architecture Diagram
-![flowchart](./Flowchart.jpg)
+![flowchart](./screenshots/Flowchart.jpg)
 
 ## Setup
 ### Prerequisites

@@ -15,10 +15,11 @@ This project focuses on designing a monitoring system for an IoT-based productio
 - Use Grafana to visualize collected metrics in a dashboard.
 - Deploy a microservice in a Kubernetes-based infrastructure on Azure.
 
+!["Flowchart"](./screenshots/Flowchart.jpg)
 ### Project Proposal 
 - proposal.md
 
-### Project Documentation 
+### Project Documentations 
 - IoT - Part of the Project: documentation_iotsetup.md
 - Monitoring - Part of the Project: documentation.md
 - Prometheus - Showcase: alert-demo.md

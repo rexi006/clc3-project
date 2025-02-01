@@ -3,7 +3,7 @@
 
   More than **100 events** are received, which can be verified via the `get_events` endpoint of the Event Processor application.  
 
-![screenshot](./get_events.png) 
+![screenshot](.screenshots/get_events.png) 
 
 ### Prometheus Alert Trigger  
   The following alert rule (defined in `prometheus-deployment.yml`) detects when event processing exceeds 100 events within a short time frame:  
@@ -27,7 +27,7 @@
 
 Open: [http://localhost:9090/alerts](http://localhost:9090/alerts)  
 
-![screenshot](./prometheus.png) 
+![screenshot](.screenshots/prometheus.png) 
 
 ### Alert Routing via Alertmanager  
 - Once triggered, the alert is forwarded by Alertmanager to our webhook.  
@@ -39,12 +39,12 @@ Open: [http://localhost:9090/alerts](http://localhost:9090/alerts)
 
 Open: [http://localhost:9093](http://localhost:9093)  
 
-![screenshot](./alertmanager.png) 
+![screenshot](.screenshots/alertmanager.png) 
 
 ### Webhook Handling in FastAPI  
   The alert is sent to the webhook endpoint in our FastAPI Event Processor App. The screenshot below shows the successful forwarding of the alert to our webhook endpoint:  
 
-![screenshot](./receivedalert.png) 
+![screenshot](.screenshots/receivedalert.png) 
 
 ---
 
@@ -91,4 +91,4 @@ Open: [http://localhost:9090/alerts](http://localhost:9090/alerts)
 
 You should now see the new alert rule active in Prometheus
 
-![screenshot](./newalertrule.png) 
+![screenshot](.screenshots/newalertrule.png) 

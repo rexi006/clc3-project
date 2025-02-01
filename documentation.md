@@ -79,7 +79,7 @@ This project focuses on designing a monitoring system for an IoT-based productio
         ```console
         kubectl create secret generic event-hub-secret --from-literal=EVENT_HUB_CONNECTION_STRING="Endpoint=sb://...;SharedAccessKeyName=...;SharedAccessKey=..."
         ```
-        you can find the connection string in the namespace, see the follwoing image - copy the primay connection string: ![screenshot](./accesspolicies.png) 
+        you can find the connection string in the namespace, see the follwoing image - copy the primay connection string: ![screenshot](./screenshots/accesspolicies.png) 
 
     We deploy the event processor using _deployment.yaml_
 
@@ -139,8 +139,8 @@ This project focuses on designing a monitoring system for an IoT-based productio
 7. Accessing the Services
     If everything went well, then you should see 4 pods and 5 services up and running - as shown in the following images:
 
-    ![screenshot-svc](./svc.png) 
-    ![screenshot-pods](./pods.png) 
+    ![screenshot-svc](./screenshots/svc.png) 
+    ![screenshot-pods](./screenshots/pods.png) 
 
 
     To view the services in the browser, use port-forwarding:

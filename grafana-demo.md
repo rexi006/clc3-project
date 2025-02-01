@@ -44,7 +44,7 @@ Now open Grafana in your browser:
 
 5️. Scroll to the bottom and click **Save & Test**  
 -> If successful, Grafana will confirm the connection!  
-![screenshot](./erfolgreichhinzugefügt.png) 
+![screenshot](./screenshots/erfolgreichhinzugefügt.png) 
 
 
 
@@ -61,9 +61,9 @@ Now open Grafana in your browser:
 
 5️. Click **Run queries** → You should now see real-time data!  
 
-![screenshot](./grafana-events-processed-total.png) 
+![screenshot](./screenshots/grafana-events-processed-total.png) 
 
 6. And so on, you can try lots of different metrices, and also the ones we defined for prometheus :) 
 
 Here are some other visualisations we tried:
-![screenshot](./dashboard.png) 
+![screenshot](./screenshots/dashboard.png) 

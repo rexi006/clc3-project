@@ -65,7 +65,14 @@ With the Devices inside the IoT-Hub in place, it is very easy to send data to th
 From an IoT-centered viewpoint, the main advantage of this setup is the flexibility of the proposed solution. In complex modern manufacturing systems, data requirements can change rapidly, driven by issues during the manufacturing process or by quality issues and subsequent customer complaints (and, in the worst case, recalls). With this in mind, management typically demands that data be available in the cloud, ready for analysis if needed, for all devices involved in the manufacturing process, which can amount to several thousand per production line. If connections have to be manually established in the manufacturing plant's connection system for each device individually, it is unrealistic for IoT- and Data engineers to keep pace with business demands, as the manufacturing process is also subject to changes. The proposed solution provides the flexibility needed to achieve business value from day one.
 
 # Summary of Research and Lessons learned
-About the connection of IoT-devices with Cloud Platform was written extensively by authors in academia and industry. The project team was able to find a broad range of valuable ressources, consisting of books, blog-articles, github repositories and research papers. First, two books from the German Author Wolfgang Babel were studied in part, to understand relevant IoT-Concepts and Industry standards ([Babel, 2021][2], [Babel, 2024][3])
+About the connection of IoT-devices with Cloud Platform was written extensively by authors in academia and industry. The project team was able to find a broad range of valuable ressources, consisting of books, blog-articles, github repositories and research papers. First, two books from the German Author Wolfgang Babel were studied in part, to understand relevant IoT-Concepts and Industry standards ([Babel, 2021][2] and [Babel, 2024][3]). From the work of this author, the project team learned about the wide ranging capabilities of the OPC-UA Framework and its application in many different industries. Very relevant for the understanding of the IoT part of our project was the "IoT-Architecture Pyramid", which shows the different layers of IoT-Architecture from start (PLC, in our case the Components of the Simulation) to finish (ERP, in our case Microsoft Azure IoT Hub):
+
+![image](https://github.com/user-attachments/assets/4cdbac2f-6790-435a-a8ae-09021bfe891e)
+
+The books from Mr Babel gave us the idea to "jump over" most of the IoT-Layers in the IoT-Architecture Pyramid, as this project is focused on Cloud Computing and not on IoT-Engineering. As outlined by Babel, this can be done using OPC-UA Servers directly from the PLC and thus ignoring most layers in the IoT-Architecture Pyramid:
+
+![image](https://github.com/user-attachments/assets/88dd2db0-1880-49d4-914a-8db08c81ac81)
+
 
 [1]: https://daniel-krzyczkowski.github.io/Connected-Factory-with-Microsoft-IoT-Solutions/
 [2]: https://link.springer.com/book/10.1007/978-3-658-34718-5

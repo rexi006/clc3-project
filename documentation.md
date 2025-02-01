@@ -51,11 +51,11 @@ This project focuses on designing a monitoring system for an IoT-based productio
 
 1. Information
    
-    The following steps should guide you through our implementation. We used only yml files to integrate prometheus and grafana with our fastApi (event processor). For simulation/showcase we did not get into more advanced settings, we kept everything in the default namespace and tried to just set those services up and running :)
+    The following steps should guide you through our implementation **(folder: monitoring-app-setup)**. We used only yml files to integrate prometheus and grafana with our fastApi (event processor). For simulation/showcase we did not get into more advanced settings, we kept everything in the default namespace and tried to just set those services up and running :)
 
-    The following steps consider the situation that already some IoT-Devices send events to an event-hub and now we want to setup the event-processor application for monitoring those events. For the IoT-Devices setup, please have a look at the File:  documentation_iotsetup.md
+    The following steps consider the situation that already some IoT-Devices send events to an event-hub and now we want to setup the event-processor application for monitoring those events. For the IoT-Devices setup, please have a look at the File:  **documentation_iotsetup.md**
 
-    The event-processor application is implemented in the `main.py`. Just a small FastApi. 
+    In the folder **monitoring-app-setup** you find all needed files for the following steps as well as corresponging markdown-explainations-files to each yml-file. 
     
 2. Building and Pushing the Microservice Docker Image
 

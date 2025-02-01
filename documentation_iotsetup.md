@@ -67,7 +67,5 @@ From an IoT-centered viewpoint, the main advantage of this setup is the flexibil
 # Summary of Research and Lessons learned
 This is a test [1]
 
-
-[1]: #reference-1: 
 * Reference 1: [Connected Factory with Microsoft IoT Solutions](https://daniel-krzyczkowski.github.io/Connected-Factory-with-Microsoft-IoT-Solutions/)
 

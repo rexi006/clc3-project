@@ -22,10 +22,11 @@ This project focuses on designing a monitoring system for an IoT-based productio
 ## Project Documentations 
 - IoT - Part of the Project:
   - Documentation: documentation_iotsetup.md
-  - Implementation: iot-simulation-setup/
+  - Implementation: simulation.py
 - Monitoring - Part of the Project: 
   - Documentation: documentation.md
   - Implementation: monitoring-app-setup/
+  - Implementation-Details: monitoring-app-setup/ -> for each yml-file a corresponding explaination-file is provided
 - Prometheus - Showcase: 
   - File: alert-demo.md
 - Grafana - Showcase and Configuration:

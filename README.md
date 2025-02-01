@@ -5,7 +5,7 @@ Team Members: Ackerl Bernadette, Altendorfer Fabian, Gugg Regina
  
 ### Goal of the Project
 
-This project focuses on designing a monitoring system for an IoT-based production simulation using cloud technologies. We use a Raspberry Pi device to simulate a manufacturing process, sending data to Azure IoT Hub. The data is then processed by a microservice running in Kubernetes, and the system is monitored using Prometheus and Grafana. This project is part of the lecture Cloud Computing at the University of Applied Sciences Upper Austria. Contributors are: Bernadette Ackerl, Fabian Altendorfer and Regina Gugg.
+This project focuses on designing a monitoring system for an IoT-based production simulation using cloud technologies. We use a Raspberry Pi device to simulate a manufacturing process, sending data to Azure IoT Hub. The data is then processed by a microservice running in Kubernetes, and the system is monitored using Prometheus and Grafana. 
 
 #### High-Level Objectives
 

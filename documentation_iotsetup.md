@@ -20,8 +20,7 @@ In the first part of the script, imports and connection strings are placed for t
 Next a list of dictionaries with lambda functions inside was created for the individual production steps to simulate a small production line. In total, eight production steps were created, including two transport-steps, each with their unique process-behaviour. Each production step can be seen as "workstation" or element of the production process. In modern real-life production systems, the data would come in similar granularity (but of course in much more volume) from the already mentioned OPC-UA Servers. 
 
 ### The Simulation
-![simulation-code](./screenshots/image-3.png)
-![simulation-code](./screenshots/image-4.png)
+The code is available in file "simulation.py"
 
 #### Async Connection Function
 The function connect_device is an asynchronous function responsible for establishing a connection to an IoT Hub device using its connection string. It creates an IoT Hub device client and connects it, returning the client for further usage. This setup is crucial for enabling communication between the simulation and the cloud services.

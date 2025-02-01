@@ -180,41 +180,41 @@ This project focuses on designing a monitoring system for an IoT-based productio
 ## Troubleshooting
 If something goes wrong, have a look at the pods if they are running and check their logs as well. 
 
-    ```console
-    kubectl get pods
-    ```
+```console
+kubectl get pods
+```
 
-    ```console
-    kubectl logs -f <POD-NAME>
-    ```
+```console
+kubectl logs -f <POD-NAME>
+```
 
 Sometime make sure you have applied the changes correctly and then rollout restart the service helps.
 
-    ```console
-    kubectl apply -f <YML-FILE>
-    ```
+```console
+kubectl apply -f <YML-FILE>
+```
 
-    ```console
-    kubectl rollout restart deployment/<DEPLOYMENT-NAME>
-    ```
+```console
+kubectl rollout restart deployment/<DEPLOYMENT-NAME>
+```
 
 
 Do not forget to build and push the dockerfile again, if you did change something in the main.py 
 
-    ```console
-    docker build --no-cache --platform linux/amd64 -t <your-dockerhub-username>/event-processor:latest . 
-    ``` 
+```console
+docker build --no-cache --platform linux/amd64 -t <your-dockerhub-username>/event-processor:latest . 
+``` 
 
-    ```console
-    docker push <your-dockerhub-username>/event-processor:latest
-    ```
+```console
+docker push <your-dockerhub-username>/event-processor:latest
+```
 
-    Our event-processor is: bernadetteackerl/event-processor:latest
+Our event-processor is: bernadetteackerl/event-processor:latest
 
 
 And if really everything goes wrong, try to stop and start the kubernetes cluster in the azure portal - because if the cache of AKS is blocking you, this helps :) so we learned that patience is needed - a lot :)
 
-## Summary of Research & Lessons Learned
+## Summary of Research & Lessons Learned of Monitoring-Project-Part
 Throughout this project, we relied on various articles and tutorials to guide us. However, most resources used Helm, while we decided to stick to our proposal and implement everything manually with YAML files. This approach made the setup more challenging, requiring extensive debugging and troubleshooting, but ultimately provided us with a deeper understanding of Kubernetes, Prometheus, and Grafana.
 
 Key challenges we faced:
@@ -242,4 +242,4 @@ For future improvements, we would consider:
 - More Advanced Alerting – once real-world IoT data streams in, we could refine alert definitions.
 - Slack or Email Notifications – replacing the webhook with integrations for real-time notifications.
 
-Overall, this project successfully demonstrated how Kubernetes, Prometheus, and Grafana can be used to monitor IoT events in real-time, trigger alerts, and visualize system health.
+Overall, this project successfully demonstrated how Kubernetes, Prometheus, and Grafana can be used to monitor IoT events in real-time, trigger alerts, and visualize system health. For the IoT-Part of this project, please have a look at the file: documentation_iotsetup.md

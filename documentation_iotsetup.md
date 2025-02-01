@@ -73,8 +73,22 @@ The books from Mr Babel gave us the idea to "jump over" most of the IoT-Layers i
 
 ![image](https://github.com/user-attachments/assets/88dd2db0-1880-49d4-914a-8db08c81ac81)
 
+With this knowledge, the team first planned to install an OPC-UA Server and Simulation on the Raspberry Pi. The connection of OPC-UA Servers with Microsoft Azure Resources to achieve a connected factory was nicely shown by [Krzyczkowski, 2019][1] on his open accessible blog. However, in order to be able to simulate an OPC-UA Server on the Raspberry Pi, a Simulation Server would have been needed on the device. The OPC-Foundation describes very nicely in a dedicated [Repository][4] how to set this up. However, in order to get an OPC-UA Simulation Server up and running, an MQTT broker would have been also needed to setup the PubSub-Architecture:
+
+![image](https://github.com/user-attachments/assets/a1f74850-0361-42f9-ba3d-4d538e0549e8)
+
+The setup of this architecture would have been another major challenge for the project team and still not relevant to this lecture, so the team decided to look out for alternatives. At this stage of the research process, the project team focused more on the capabilities of Microsoft Azure in regard to the connection of IoT-Devices. The topic was covered in academia with the integration of OPC-UA Servers ([Forsström and Jennehag, 2017][5]), but the literature review didn't give results for the connection of IoT-Ressources to Azure Ressources directly without the use of OPC-UA Servers and/or MQTT-Brokers. Luckily, the available documentation of Microsoft goes into that in great detail, giving the project team valuable ideas for the realization of the project ([Documentation about IoT-Services][6]). In the documentation we learned about the capabilities of Azure IoT-Hub, device management and the connection of the Event-Hub in Azure to further transport the messages in the pipeline to additional Microsoft Azure Services ([Documentation about Device Management][7], (Documentation about Messages and Event-Hub in Azure[8]).
+
+In conclusion, while the initial approach was technically ambitious, the pivot to using Azure's native IoT services proved to be a pragmatic decision, aligning well with the project's focus on cloud computing over IoT engineering. This journey not only broadened the technical knowledge of the team but also highlighted the importance of aligning project goals with available resources and practical considerations.
 
 [1]: https://daniel-krzyczkowski.github.io/Connected-Factory-with-Microsoft-IoT-Solutions/
 [2]: https://link.springer.com/book/10.1007/978-3-658-34718-5
 [3]: https://link.springer.com/book/10.1007/978-3-658-42987-4
+[4]: https://github.com/FabianAltendorfer/UA-IIoT-StarterKit?tab=readme-ov-file
+[5]: https://ieeexplore.ieee.org/abstract/document/8016265
+[6]: https://learn.microsoft.com/en-us/azure/iot/iot-services-and-technologies
+[7]: https://learn.microsoft.com/en-us/azure/iot-hub/how-to-device-management?pivots=programming-language-csharp
+[8]: https://learn.microsoft.com/en-us/azure/developer/python/quickstarts-messaging-iot
 
+
+Copyright Disclaimer: All mentioned work was used for research purposes only and accessed via officially licensed channels of the University of Applied Sciences Upper Austria. Please don't use any screenshots from this documentation.

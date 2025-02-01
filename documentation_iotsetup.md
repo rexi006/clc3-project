@@ -65,7 +65,7 @@ With the Devices inside the IoT-Hub in place, it is very easy to send data to th
 From an IoT-centered viewpoint, the main advantage of this setup is the flexibility of the proposed solution. In complex modern manufacturing systems, data requirements can change rapidly, driven by issues during the manufacturing process or by quality issues and subsequent customer complaints (and, in the worst case, recalls). With this in mind, management typically demands that data be available in the cloud, ready for analysis if needed, for all devices involved in the manufacturing process, which can amount to several thousand per production line. If connections have to be manually established in the manufacturing plant's connection system for each device individually, it is unrealistic for IoT- and Data engineers to keep pace with business demands, as the manufacturing process is also subject to changes. The proposed solution provides the flexibility needed to achieve business value from day one.
 
 # Summary of Research and Lessons learned
-This is a test [1]
+This is a test [Krzyczkowski][1]
 
-* Reference 1: [Connected Factory with Microsoft IoT Solutions](https://daniel-krzyczkowski.github.io/Connected-Factory-with-Microsoft-IoT-Solutions/)
+[1]: https://daniel-krzyczkowski.github.io/Connected-Factory-with-Microsoft-IoT-Solutions/
 

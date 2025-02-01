@@ -73,7 +73,7 @@ The books from Mr Babel gave us the idea to "jump over" most of the IoT-Layers i
 
 ![image](https://github.com/user-attachments/assets/88dd2db0-1880-49d4-914a-8db08c81ac81)
 
-With this knowledge, the team first planned to install an OPC-UA Server and Simulation on the Raspberry Pi. The connection of OPC-UA Servers with Microsoft Azure Resources to achieve a connected factory was nicely shown by [Krzyczkowski, 2019][1] on his open accessible blog. However, in order to be able to simulate an OPC-UA Server on the Raspberry Pi, a Simulation Server would have been needed on the device. The OPC-Foundation describes very nicely in a dedicated [Repository][4] how to set this up. However, in order to get an OPC-UA Simulation Server up and running, an MQTT broker would have been also needed to setup the PubSub-Architecture:
+With this knowledge, the team first planned to install an OPC-UA Server and Simulation on the Raspberry Pi. The connection of OPC-UA Servers with Microsoft Azure Resources to achieve a connected factory was nicely shown by [Krzyczkowski, 2019][1] on his open accessible blog. However, in order to be able to simulate an OPC-UA Server on the Raspberry Pi, a Simulation Server would have been needed on the device. The OPC-Foundation describes in a dedicated [Repository][4] in detail, how to set this up. However, in order to get an OPC-UA Simulation Server up and running, an MQTT broker would have been also needed to setup the PubSub-Architecture:
 
 ![image](https://github.com/user-attachments/assets/a1f74850-0361-42f9-ba3d-4d538e0549e8)
 

@@ -16,11 +16,17 @@ This project focuses on designing a monitoring system for an IoT-based productio
 - Deploy a microservice in a Kubernetes-based infrastructure on Azure.
 
 !["Flowchart"](./screenshots/Flowchart.jpg)
-### Project Proposal 
-- proposal.md
+## Project Proposal 
+- File: proposal.md
 
-### Project Documentations 
-- IoT - Part of the Project: documentation_iotsetup.md
-- Monitoring - Part of the Project: documentation.md
-- Prometheus - Showcase: alert-demo.md
-- Grafana - Showcase and Configuration: grafana-demo.md
+## Project Documentations 
+- IoT - Part of the Project:
+  - Documentation: documentation_iotsetup.md
+  - Implementation: iot-simulation-setup/
+- Monitoring - Part of the Project: 
+  - Documentation: documentation.md
+  - Implementation: monitoring-app-setup/
+- Prometheus - Showcase: 
+  - File: alert-demo.md
+- Grafana - Showcase and Configuration:
+  - File: grafana-demo.md
